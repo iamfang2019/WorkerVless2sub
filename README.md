@@ -4,6 +4,10 @@
 
 Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
 
+# Pages 部署方法 [视频教程](https://youtu.be/zckWQW-C39k)
+
+**Pages部署方式不做文字说明，请自行观看视频教程**
+
 # Workers 部署方法 [视频教程](https://youtu.be/AtCF7eq0hcE)
 
 ### 1. 部署 Cloudflare Worker：
@@ -67,7 +71,6 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
    - 添加 `PATH` 变量，例如 `/?ed=2048`；
 
 
-
 # 订阅生成器 使用方法 [视频教程](https://youtu.be/OjqCKeEY7DQ)
 
   例如您的workers项目域名为：`sub.cmliussss.workers.dev`；
@@ -108,10 +111,17 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
 ### 变量说明
 | 变量名 | 示例 | 备注 | 
 |--------|---------|-----|
-| TOKEN | auto | 快速订阅内置节点的订阅路径地址 /auto | 
+| TOKEN | auto | 快速订阅内置节点的订阅路径地址 /auto (支持多元素, 元素之间使用`,`作间隔)| 
 | HOST | edgetunnel-2z2.pages.dev | 快速订阅内置节点的伪装域名 | 
-| UUID | 30e9c5c8-ed28-4cd9-b008-dc67277f8b02 | 快速订阅内置节点的UUID | 
-| PATH | /?ed=2048 | 快速订阅内置节点的路径信息 | 
+| UUID | b7a392e2-4ef0-4496-90bc-1c37bb234904 | 快速订阅内置节点的UUID | 
+| PATH | /?ed=2560 | 快速订阅内置节点的路径信息 | 
+| ADD | icook.tw:2053#官方优选域名 | 对应`addresses`字段 (支持多元素, 元素之间使用`,`作间隔) | 
+| ADDAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt) | 对应`addressesapi`字段 (支持多元素, 元素之间使用`,`作间隔) | 
+| ADDNOTLS | icook.hk:8080#官方优选域名 | 对应`addressesnotls`字段 (支持多元素, 元素之间使用`,`作间隔) | 
+| ADDNOTLSAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/addressesapi.txt) | 对应`addressesnotlsapi`字段 (支持多元素, 元素之间使用`,`作间隔) | 
+| ADDCSV | [https://raw.github.../addressescsv.csv](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv) | 对应`addressescsv`字段 (支持多元素, 元素之间使用`,`作间隔) | 
+| DLS | 8 |`addressescsv`测速结果满足速度下限 | 
+| NOTLS | false | 改为`true`, 将不做域名判断 始终返回noTLS节点 | 
 | TGTOKEN | 6894123456:XXXXXXXXXX0qExVsBPUhHDAbXXXXXqWXgBA | 发送TG通知的机器人token | 
 | TGID | 6946912345 | 接收TG通知的账户数字ID | 
 | SUBAPI | api.v1.mk | clash、singbox等 订阅转换后端 | 
